@@ -29,12 +29,15 @@ let main = async() => {
     console.log(data)
 
     await console.log("Done Inputing to Array")
-    await page.goto(data[0].URL, {waitUntil:'networkidle0'})
+    // await page.goto(data[0].URL, {waitUntil:'networkidle0'})
 
     let advdata = []
 
-    html = await page.content()
-    $ = cheerio.load(html)
+    for (let i = 0; i < data.length; i++) {
+        await page.goto(data[i].URL, {waitUntil:'networkidle0'})
+
+        html = await page.content()
+        $ = cheerio.load(html)
 
         let advtitle = $('.entry-title h1').text().trim()
         let advpublish = $('.entry-meta span.post-time').text()
@@ -46,7 +49,8 @@ let main = async() => {
             Article: content
         })
 
-    console.log(advdata)
+        console.log(advdata)
+    }
 
     await console.log("DONE!")
     await browser.close()
