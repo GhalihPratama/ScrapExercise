@@ -8,11 +8,20 @@
   "author": "GnH",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.5",
+    "cheerio": "^1.0.0-rc.9",
     "delay": "^5.0.0",
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "puppeteer": "^7.1.0"
   },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GhalihPratama/ScrapExercise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GhalihPratama/ScrapExercise/issues"
+  },
+  "homepage": "https://github.com/GhalihPratama/ScrapExercise#readme",
   "description": ""
 }
